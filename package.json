@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Open source NFT Marketplace Contracts",
   "author": "Flavio Brassesco",
-  "license": "GNU GPLv3",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "prepare": "husky install",
     "solhint": "solhint -f table contracts/**/*.sol",

@@ -1,5 +1,4 @@
-//SPDX-License-Identifier: GNU GPLv3 
-pragma solidity ^0.8.0;
+//SPDX-License-Identifier: GPLv3GPL-3.0-or-later
 
 interface INFTCollectionManager {
   function addWhitelistedCollection(address, bool) external;
