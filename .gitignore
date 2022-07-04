@@ -1,0 +1,11 @@
+/node_modules
+/.pnp
+.pnp.js
+.env
+
+# hardhat
+cache
+artifacts
+!*/artifacts
+
+.eslintcache
