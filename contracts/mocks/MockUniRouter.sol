@@ -1,4 +1,6 @@
 //SPDX-License-Identifier: GNU GPLv3
+
+// solhint-disable-next-line
 pragma solidity >=0.6.2;
 
 import "@uniswap/v2-periphery/contracts/UniswapV2Router02.sol";
