@@ -10,7 +10,7 @@
     "prettier:solidity": "prettier --write contracts/**/*.sol",
     "h:compile": "hardhat compile",
     "h:test": "hardhat test",
-    "h:mockup": "hardhat node && hardhat run --network localhost scripts/mockup-deploy.js",
+    "h:mockup": "hardhat node & hardhat run --network localhost scripts/mockup-deploy.js",
     "h:mumbai": "hardhat run --network mumbai scripts/deploy.js"
   },
   "dependencies": {
@@ -18,11 +18,11 @@
     "@nomiclabs/hardhat-etherscan": "^2.1.8",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@openzeppelin/contracts": "^4.5.0",
-    "@uniswap/v2-periphery": "^1.1.0-beta.0",
     "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
     "ethers": "^5.5.2",
     "ethers-eip712": "^0.2.0",
-    "hardhat": "^2.8.0",
+    "hardhat": "2.9.3",
     "ipfs-http-client": "^55.0.0"
   },
   "devDependencies": {

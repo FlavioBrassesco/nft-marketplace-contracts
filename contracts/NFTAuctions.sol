@@ -42,6 +42,8 @@ contract NFTAuctions is
     INFTCollectionManager internal CollectionManager;
     ISalesService internal SalesService;
 
+    string public name = "NFT Auctions";
+
     event ItemCreated(
         address indexed seller,
         address indexed collectionAddress,
@@ -208,7 +210,7 @@ contract NFTAuctions is
             item.currentBidder,
             item.currentBid,
             item.endsAt,
-            collectionAddress,
+            collectionAddress_,
             tokenId
         );
     }
@@ -244,7 +246,7 @@ contract NFTAuctions is
             item.currentBidder,
             item.currentBid,
             item.endsAt,
-            collectionAddress,
+            collectionAddress_,
             tokenId
         );
     }

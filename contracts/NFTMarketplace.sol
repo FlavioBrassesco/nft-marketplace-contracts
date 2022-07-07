@@ -33,7 +33,7 @@ contract NFTMarketplace is
         uint256 price;
     }
 
-    string private _name;
+    string public name = "NFT Marketplace";
     INFTCollectionManager internal CollectionManager;
     ISalesService internal SalesService;
 

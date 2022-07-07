@@ -41,6 +41,8 @@ contract NFTBuyOffers is
     INFTCollectionManager internal CollectionManager;
     ISalesService internal SalesService;
 
+    string public name = "NFT Buy Offers";
+
     event OfferCreated(
         address indexed bidder,
         address indexed collectionAddress,
@@ -163,13 +165,13 @@ contract NFTBuyOffers is
         address user_,
         address collectionAddress_,
         uint256 index_
-    ) public view returns (uint256 bid) {
+    ) public view returns (uint256 tokenId, uint256 bid) {
         require(
             index_ < _userBiddedTokens[user_][collectionAddress_].length(),
             "User Bid index out of bounds"
         );
-        uint256 tokenId = _userBiddedTokens[user_][collectionAddress_].at(index_);
-        return _userBids[user_][collectionAddress_][tokenId];
+        tokenId = _userBiddedTokens[user_][collectionAddress_].at(index_);
+        return (tokenId, _userBids[user_][collectionAddress_][tokenId]);
     }
 
     function getUserOffersCount(address user_, address collectionAddress_)
