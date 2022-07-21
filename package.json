@@ -6,6 +6,7 @@
     "h:mumbai": "hardhat run --network mumbai scripts/deploy.js",
     "h:matic": "hardhat run --network matic scripts/deploy.js",
     "h:bsc": "hardhat run --network bsc scripts/deploy.js",
+    "h:mockup": "(sleep 5 && hardhat run --network localhost scripts/mockup-deploy.js) & hardhat node",
     "h:test": "hardhat test",
     "h:verify": "hardhat verify --network mumbai process.env.VERIFY"
   },
