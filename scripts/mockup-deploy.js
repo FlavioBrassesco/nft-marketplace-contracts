@@ -54,19 +54,6 @@ async function main() {
     await ethers.provider.getBlock(txApproveErc20.blockNumber)
   ).timestamp;
 
-  // Add liquidity to have an exchange price for eth - er20 pair
-  const txAddLiquidity = await unirouter.addLiquidityETH(
-    erc20.address,
-    ethers.utils.parseEther("20.0"),
-    ethers.utils.parseEther("10.0"),
-    ethers.utils.parseEther("10.0"),
-    signers[0].address,
-    blockTimeStamp + 10000,
-    { value: ethers.utils.parseEther("10.0") }
-  );
-  txAddLiquidity.wait();
-  console.log("Liquidity added");
-
   // Add collections to nftmanager whitelist & setting fee and floor price for each one
   await Promise.all(
     data.collections.map(async (c) => {
@@ -238,6 +225,19 @@ async function main() {
         ));
     })
   );
+
+  // Add liquidity to have an exchange price for eth - er20 pair
+  const txAddLiquidity = await unirouter.addLiquidityETH(
+    erc20.address,
+    ethers.utils.parseEther("20.0"),
+    ethers.utils.parseEther("10.0"),
+    ethers.utils.parseEther("10.0"),
+    signers[0].address,
+    blockTimeStamp + 10000,
+    { value: ethers.utils.parseEther("10.0") }
+  );
+  txAddLiquidity.wait();
+  console.log("Liquidity added");
 }
 
 async function approveMarketplaceInERC721(

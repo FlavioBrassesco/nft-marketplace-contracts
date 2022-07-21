@@ -1,9 +1,7 @@
 //SPDX-License-Identifier: GPL-3.0-or-later
-
-// solhint-disable-next-line
 pragma solidity >=0.6.2;
 
-import "@uniswap/v2-periphery/contracts/UniswapV2Router02.sol";
+import "../deps/v2-periphery/UniswapV2Router02.sol";
 
 contract MockUniRouter is UniswapV2Router02 {
     constructor(address _factory, address _WETH)
