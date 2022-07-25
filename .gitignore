@@ -9,3 +9,4 @@ artifacts
 !*/artifacts
 
 .eslintcache
+typechain-types
